@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(218, 24%, 91%);
+}
+article{
+    width: 80vmin;
+    
+}
+
+.container-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+
+}
+.main-heading{
+    color: hsl(179, 62%, 43%);
+}
+.main-para-two{
+    color: hsl(71, 73%, 54%);
+}
+.main-para{
+    color: hsl(204, 52%, 88%);
+}
+h3{
+    color: #fff;
+
+}
+.one{
+    background-color: hsl(179, 62%, 43%);
+    display: flex;
+}
+.two{
+    background-color: hsl(179, 43%, 52%);
+}
+button{
+    padding: 10px;
+    width: 30vmin;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    background-color: hsl(71, 73%, 54%);
+}
+
+.container-two{
+    display: flex;
+   
+}
+.one{
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-bottom-left-radius: 10px;
+}
+.two{
+    width: 50%;
+    padding: 2rem;
+    border-bottom-right-radius: 10px;
+}
+.last-para{
+    color:#d5e4e6 ;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.money{
+    color: #fff;
+}
+.money span{
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(179, 63%, 66%) ;
+
+}
+.money-para{
+    color: #fff;
+}
+
+@media (max-width:600px){
+    article{
+        width: fit-content;
+    }
+    .container-two{
+        flex-direction: column;
+    }
+    .container-one{
+        width: 304px;
+    }
+    .one{
+        width: 300px;
+        border-bottom-left-radius: 0;
+    }
+    .two{
+        width: 300px;
+        border-bottom-left-radius:10px;
+    }
+}
