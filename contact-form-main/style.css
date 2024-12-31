@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:hsl(148, 38%, 91%) ;
+    font-family: "Karla", serif;
+    
+}
+.form__container {
+    padding: 1rem ;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    gap: 1rem ;
+    width: 400px ;
+    height: fit-content;
+    background:#fff;
+    border-radius: 10px ;
+}
+.form__inputs {
+    display: flex;
+    gap: 1rem;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form__email {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+input {
+    padding: 0.3rem 0 ;
+}
+.form__email input {
+    width: 22rem ;
+}
+.form__query {
+    display: flex;
+    flex-direction: column;
+    gap: 5px ;
+}
+.form__query-item {
+    display: flex;
+    gap: 1rem;
+}
+.form__query-box {
+    padding: 1rem ;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.form__message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error__state {
+    color: red;
+    display: none;
+}
+.form__check input {
+    accent-color: hsl(169, 57%, 40%);
+}
+.form__button {
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    color: #fff;
+    background: hsl(169, 82%, 27%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: max-content;
+    position: relative;
+    left: 10px;
+    width:22rem;
+}
+.form__button:hover {
+    cursor: pointer;
+    background-color:hsl(169, 57%, 40%) ;
+   
+}
+.form__query-box input {
+    accent-color: hsl(169, 57%, 40%);
+}
+
+/* success message */
+.success__message {
+    display: none;
+    padding: 30px 20px;
+    background: hsl(187, 24%, 22%);
+    border-radius: 10px;
+}
+.success__message-content {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.success__message img {
+    width: 20px;
+    height: 20px;
+    
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+    body {
+      padding: 1rem; /* Add some padding for smaller screens */
+      font-size: 0.9rem; /* Slightly reduce font size for better readability */
+    }
+  
+    .form__container {
+      width: 100%; /* Full width for smaller screens */
+      padding: 1rem;
+      border-radius: 5px; /* Slightly smaller border radius */
+    }
+  
+    .form__inputs {
+      flex-direction: column; /* Stack inputs vertically */
+      gap: 0.5rem; /* Reduce gap between inputs */
+    }
+  
+    .form__input,
+    .form__email input,
+    .form__email,
+    .form__button {
+      width: 100%; /* Full width for inputs and button */
+    }
+  
+    .form__query {
+      gap: 0.5rem; /* Reduce gap between query items */
+    }
+  
+    .form__query-box {
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+    .form__query-item {
+      flex-direction: column;
+    }
+  
+    .form__message {
+      gap: 0.5rem; /* Reduce gap for the message area */
+    }
+  
+    .success__message {
+      padding: 20px 10px; /* Adjust padding for success message */
+    }
+  
+    .success__message img {
+      width: 15px;
+      height: 15px; /* Scale down icons */
+    }
+    .form__button {
+        left:0;
+    }
+  }
+  
+

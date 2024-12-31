@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success__message">
+      <h3 class="success__message-content"><img src="/assets/images/icon-success-check.svg" alt=""> Message Sent</h3>
+      <p>Thanks for completing the form . we'll be touch soon</p>
+    </div>
+    <div class="form__container">
+      <h1 class="form__container-title">Contact Us</h1>
+      <div class="form">
+        <form>
+          <div class="form__inputs">
+            <div class="form__input">
+              <label for="firstName">First Name &sstarf;</label>
+              <input type="text" name="firstName" id="firstName" />
+              <span class="error__state">This Field is required</span>
+            </div>
+            <div class="form__input">
+              <label for="lastName">Last Name &sstarf;</label>
+              <input type="text" name="lastName" id="lastName" />
+              <span class="error__state">This Field is required</span>
+            </div>
+          </div>
+          <div class="form__email">
+            <label for="email">Email address &sstarf;</label>
+            <input type="email" name="email" id="email" />
+            <span class="error__state"
+              >Please enter the valid email address.</span
+            >
+          </div>
+          <div class="form__query">
+            <p >Query Type &sstarf;</p>
+            <div class="form__query-item">
+              <p class="form__query-box">
+                <input id="queryTypea" name="query" type="radio" /><label for="queryTypea">General
+                  Enquiry</label>
+              </p>
+              <p class="form__query-box">
+                <input id="queryTypeb" name="query" type="radio" /><label for="queryTypeb">Support
+                  Request</label>
+              </p>
+            </div>
+            <span class="error__state">Please select query type</span>
+          </div>
+          <div class="form__message">
+            <label for="message">Message &sstarf;</label>
+            <textarea rows="5" name="message" id="message"></textarea>
+            <span class="error__state">This field is required</span>
+          </div>
+          <div class="form__check">
+            <input type="checkbox" id="check" />
+            <label for="check"
+              >I consent to being contacted by the team To submit this form
+              &sstarf;</label
+            >
+            <span class="error__state"
+              >To submit this form, please consent to being contacted</span
+            >
+          </div>
+          <button class="form__button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/kenzo0p">Om Bhor</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
