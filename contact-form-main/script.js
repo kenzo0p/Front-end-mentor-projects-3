@@ -14,17 +14,11 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Function to show error state
 const showError = (element) => {
-    // Find the closest parent with class form__input, form__email, form__message, or form__query
     const parentContainer = element.closest('.form__input, .form__email, .form__message, .form__query, .form__check');
     if (parentContainer) {
-        // Find the error message span within this container
         const errorSpan = parentContainer.querySelector('.error__state');
         if (errorSpan) {
-            element.style.border = '1px solid red';
-            errorSpan.style.display = 'block';
-            errorSpan.style.color = 'red';
-            errorSpan.style.fontSize = '14px';
-            errorSpan.style.marginTop = '5px';
+            errorSpan.style.visibility = 'visible';
         }
     }
 };
@@ -35,8 +29,7 @@ const hideError = (element) => {
     if (parentContainer) {
         const errorSpan = parentContainer.querySelector('.error__state');
         if (errorSpan) {
-            element.style.border = '1px solid #ccc';
-            errorSpan.style.display = 'none';
+            errorSpan.style.visibility = 'hidden';
         }
     }
 };
@@ -48,13 +41,10 @@ const validateRadioButtons = () => {
     const errorElement = queryContainer.querySelector('.error__state');
     
     if (!isChecked) {
-        errorElement.style.display = 'block';
-        errorElement.style.color = 'red';
-        errorElement.style.fontSize = '14px';
-        errorElement.style.marginTop = '5px';
+        errorElement.style.visibility = 'visible';
         return false;
     }
-    errorElement.style.display = 'none';
+    errorElement.style.visibility = 'hidden';
     return true;
 };
 
@@ -104,26 +94,23 @@ form.addEventListener('submit', (e) => {
     if (!consentCheckbox.checked) {
         const checkboxContainer = consentCheckbox.closest('.form__check');
         const errorElement = checkboxContainer.querySelector('.error__state');
-        errorElement.style.display = 'block';
-        errorElement.style.color = 'red';
-        errorElement.style.fontSize = '14px';
-        errorElement.style.marginTop = '5px';
+        errorElement.style.visibility = 'visible';
         isValid = false;
     } else {
         const checkboxContainer = consentCheckbox.closest('.form__check');
         const errorElement = checkboxContainer.querySelector('.error__state');
-        errorElement.style.display = 'none';
+        errorElement.style.visibility = 'hidden';
     }
 
     // If form is valid, show success message
     if (isValid) {
-        successMessage.style.display = 'block';
+        successMessage.style.visibility = 'visible';
         formContainer.style.display = 'none';
         form.reset();
     }
 });
 
-// Real-time validation for each field
+// Real-time validation
 firstName.addEventListener('input', () => {
     if (firstName.value.trim()) {
         hideError(firstName);
@@ -153,7 +140,7 @@ queryRadios.forEach(radio => {
         if (radio.checked) {
             const queryContainer = document.querySelector('.form__query');
             const errorElement = queryContainer.querySelector('.error__state');
-            errorElement.style.display = 'none';
+            errorElement.style.visibility = 'hidden';
         }
     });
 });
@@ -162,9 +149,9 @@ consentCheckbox.addEventListener('change', () => {
     if (consentCheckbox.checked) {
         const checkboxContainer = consentCheckbox.closest('.form__check');
         const errorElement = checkboxContainer.querySelector('.error__state');
-        errorElement.style.display = 'none';
+        errorElement.style.visibility = 'hidden';
     }
 });
 
-// Add some basic styles for the success message
-successMessage.style.display = 'none';
+// Initial state
+successMessage.style.visibility = 'hidden';
