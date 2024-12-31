@@ -73,7 +73,7 @@ input {
 
 .error__state {
     color: red;
-    display: none;
+    visibility: hidden;
 }
 .form__check input {
     accent-color: hsl(169, 57%, 40%);
