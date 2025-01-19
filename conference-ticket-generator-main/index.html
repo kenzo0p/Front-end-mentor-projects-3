@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ticket-overall">
+      <div class="background"></div>
+      <div class="logo">
+        <img src="./assets/images/logo-mark.svg" alt="" class="logo-img" />
+        <h2 class="logo-name">Coding Conf</h2>
+      </div>
+      <h1 class="main-heading">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="sub-heading">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+      <div class="form-container">
+        <form class="form">
+          <div class="form__image">
+            <label for="drop-area"> Uplaod Avatar </label>
+            <div id="drop-area" class="drop-area">
+              <img
+                src="/assets/images/icon-upload.svg"
+                alt=""
+                class="drag-drop"
+              />
+              <p>Drag and Drop image here or click to uplaod.</p>
+              <input
+                type="file"
+                id="file-input"
+                accept="image/*"
+                style="display: none"
+              />
+            </div>
+            <span class="span-img"
+              ><img src="assets/images/icon-info.svg" alt="" />Upload your photo
+              (JPG or PNG , max size: 500KB).</span
+            >
+          </div>
+          <div class="form__name">
+            <label for="name">Full Name</label>
+            <input placeholder="Your Name" type="text" class="input name" />
+          </div>
+          <div class="form__email">
+            <label for="email">Email Address</label>
+            <input type="email" class="input" placeholder="example@email.com" />
+          </div>
+          <div class="form__github">
+            <label for="gitHub">GitHub Username</label>
+            <input type="text" class="input github" placeholder="@yourusername" />
+          </div>
+          <button type="submit" class="form__button">Generate My Ticket</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Generated tickets starts -->
+
+    <div class="ticket">
+      <div>
+        <img src="./assets/images/logo-full.svg" alt="" />
+      </div>
+      <div class="ticket__ticket-items">
+        <h1>Congrats, <span class="name">Jonathan Kristof!</span> Your ticket is ready.</h1>
+        <p class="ticket__description">
+          We've emailed your ticket to <span class="email">jonathan@gmail.com</span> and will
+          send updates in the run up to the event.
+        </p>
+      </div>
+      <div class="card_main">
+        <div>
+          <img src="./assets/images/pattern-ticket.svg" alt="" height=160 class="ticket__card">
+        </div>
+        <div class="card__overall-info">
+          <div style="display: flex; flex-direction: column;">
+            <img src="./assets/images/logo-full.svg" height=30 alt="">
+            <p style="font-size: 10px; margin-left: 50px;">Jan 31 - Feb 3, 2025 San Francisco</p>
+          </div>
+          <div>
+          </div>
+          <div class="card_info">
+            <img height=50 style="border-radius:10px;" src="./assets/images/image-avatar.jpg" alt="">
+            <div style="text-align: start;">
+              <p style="font-size: 10px;">Jonathan Kristof</p>
+              <p style="font-size: 10px;"><img src="./assets/images/instagram.svg" height=10 alt=""> @jonathankristof</p>
+            </div>
+            <p class="random">#43535</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Generated tickets ends -->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/kenzo0p">Om bhor</a>.
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
